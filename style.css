@@ -1,0 +1,1832 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    background: #191919;
+    font-family: sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background: #1a1a1a;
+}
+
+.link-group{
+    list-style: none;
+    display: flex;
+}
+
+.link a{
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: .5s;
+    font-size: 20px;
+}
+
+.link a:hover, .link.active a{
+    opacity: 1;
+}
+.home-section{
+    width: 100%;
+    height: 100vh;
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.hero-heading{
+    color: #fff;
+    font-size: 120px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.home-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+.home-section{
+    /* previous styles */
+    position: fixed;
+}
+.home-section.active,
+.project-section.active,
+.about-section.active,
+.contact-section.active{
+    position: relative;
+    opacity: 1;
+    z-index: 8;
+}
+/* project-section */
+
+.project-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 100px;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    opacity: 0;
+}
+
+.project-heading{
+    font-size: 100px;
+    background: #252525;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+
+.project-card{
+    height: 400px;
+    position: relative;
+}
+
+.project-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.project-content{
+    position: relative;
+    padding: 40px;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+}
+
+.project-title{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+}
+
+.project-info{
+    margin: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.project-btn-grp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.project-btn{
+    height: 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.project-btn.live{
+    background: none;
+    border: 2px solid #fff;
+}
+/* about-section */
+
+.about-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 0;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.about{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 65%;
+    grid-gap: 40px;
+}
+
+.about-img-container{
+    position: relative;
+}
+
+.about-info{
+    color: #fff;
+    opacity: 0.6;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.about-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.download-cv-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.download-cv-btn:hover{
+    background: #000;
+}
+/* skills */
+
+.skill-section{
+    position: relative;
+    margin: 100px 0;
+}
+
+.heading{
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+.skills-container{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    color: #fff;
+}
+
+.skill-card{
+    position: relative;
+}
+
+.skill-img{
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+
+.skill-name{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 30px 0 20px;
+}
+
+.skill-info{
+    text-align: center;
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.skill-level{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 50%;
+    border: 10px solid;
+}
+
+.skill-card:nth-child(1) .skill-level{
+    background: #ff4f4f28;
+    border-color: #ff4f4f;
+    color: #ff4f4f;
+}
+
+.skill-card:nth-child(2) .skill-level{
+    background: #4fa0ff28;
+    border-color: #4fa0ff;
+    color: #4fa0ff;
+}
+
+.skill-card:nth-child(3) .skill-level{
+    background: #ffed4f28;
+    border-color: #ffed4f;
+    color: #ffed4f;
+}
+
+.skill-card:nth-child(4) .skill-level{
+    background: #52ff4f28;
+    border-color: #52ff4f;
+    color: #52ff4f;
+}
+
+.skill-card:nth-child(5) .skill-level{
+    background: #4fdfff28;
+    border-color: #4fdfff;
+    color: #4fdfff;
+}
+/* timeline */
+
+.timeline{
+    display: block;
+    width: 80%;
+    margin: 150px auto;
+}
+
+.timeline .heading{
+    margin-bottom: 150px;
+}
+
+.card{
+    width: 45%;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    margin: -80px 0;
+    position: relative;
+    background: #f00;
+}
+
+.card:nth-child(even){
+    margin-left: auto;
+}
+
+.card:nth-child(even):before{
+    content: '';
+    position: absolute;
+    left: -15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid #191919;
+    border-radius: 50%;
+}
+
+.card:nth-child(even):after{
+    content: '';
+    position: absolute;
+    left: -8.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.card:nth-child(odd):before{
+    content: '';
+    position: absolute;
+    right: -13%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid #191919;
+    border-radius: 50%;
+}
+
+.card:nth-child(odd):after{
+    content: '';
+    position: absolute;
+    right: -8.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.card:nth-child(2), .card:nth-child(2):before{
+    background: #ff4f4f;
+}
+.card:nth-child(3), .card:nth-child(3):before{
+    background: #ffb84f;
+}
+.card:nth-child(4), .card:nth-child(4):before{
+    background: #3dca5c;
+}
+.card:nth-child(5), .card:nth-child(5):before{
+    background: #565252;
+}
+.card:nth-child(6), .card:nth-child(6):before{
+    background: #4fa0ff;
+}
+
+.card:nth-child(even) .card-body:before{
+    content: '';
+    position: absolute;
+    left: -12%;
+    top: 0;
+    width: 0px;
+    height: 100%;
+    border: 1px dashed #fff;
+    z-index: -1;
+}
+
+.card-title{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+37
+Jump to Comments
+1003
+Save
+
+Cover image for 🔥🤯 Amazing Portfolio website using HTML, CSS and JS.
+Modern Web
+Modern Web
+Posted on 16 Dec 2021
+
+
+458
+
+126
+🔥🤯 Amazing Portfolio website using HTML, CSS and JS.
+#
+html
+#
+css
+#
+javascript
+#
+webdev
+If you are a beginner or a pro. This blog is for everyone who want to make his/her portfolio an outstanding one. In this tutorial, you’ll learn to create your own modern looking portfolio website using HTML, CSS and JS. In the article, you’ll learn to create smooth transition on navigations, you’ll create CSS timeline to showcase your education and experience, you’ll make a separate section for your project with a cool hover effect. You must make this portfolio to impress your recruiter.
+
+So, without wasting more time, let's start. To see project demo or for better understanding of code, you can watch the tutorial below.
+
+Video Tutorial
+
+I appreciate if you can support me by subscribing my youtube channel.
+
+Source Code
+
+Code
+So, let's start by making navbar for the site. But before that you should know our files and folders.
+
+Portfolio Website - Folder Structure
+
+You can download the images here.
+
+Navbar
+So let's start, to create navbar first write the HTML basic template and link style.css and app.js file to index.html file. After done with all of this. Create navbar.
+<!-- navbar -->
+<nav class="navbar">
+    <ul class="link-group">
+        <li class="link active"><a href="#">home</a></li>
+        <li class="link"><a href="#">projects</a></li>
+        <li class="link"><a href="#">about</a></li>
+        <li class="link"><a href="#">contact</a></li>
+    </ul>
+</nav>
+Okay we are done with HTMl, so add some style to it also.
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    background: #191919;
+    font-family: sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background: #1a1a1a;
+}
+
+.link-group{
+    list-style: none;
+    display: flex;
+}
+
+.link a{
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: .5s;
+    font-size: 20px;
+}
+
+.link a:hover, .link.active a{
+    opacity: 1;
+}
+After done with this, you'll probably see something like this.
+
+Portfolio Website - Navbar
+
+Okay, so with that we are done with navbar. So let's move on to our home section
+
+home section
+To create home section code this HTML structure after navbar element.
+<!-- home section -->
+
+<section class="home-section active">
+    <h1 class="hero-heading">hello, i am <br> kunaal</h1>
+    <img src="img/home.png" class="home-img" alt="">
+</section>
+And give it some styles.
+.home-section{
+    width: 100%;
+    height: 100vh;
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.hero-heading{
+    color: #fff;
+    font-size: 120px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.home-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+If you see the above code, you'll see position: relative and top: 0 under .home-section. These properties are important while navigation, cause how will our navigation work is little complex. All of our sections (home, project, about, contact) all of these will have position: fixed because of this, all sections will be on top of each other. And we'll use active class to indicate the active section. Using active class we'll set section's position's to relative along with its opacity to 1. This is how our navigation will work. Isn't is complicated ??
+
+Output
+Output
+
+So, once you are done with home section make sure you change its position to fixed from relative.
+.home-section{
+    /* previous styles */
+    position: fixed;
+}
+Then make active class styles.
+.home-section.active,
+.project-section.active,
+.about-section.active,
+.contact-section.active{
+    position: relative;
+    opacity: 1;
+    z-index: 8;
+}
+You can see I have added each and every section here in order to make smooth navigation.
+
+Project section
+Now, let's make project section. For that code this HTML.
+<!-- project section -->
+<section class="project-section">
+    <h1 class="project-heading">some of my projects</h1>
+    <div class="project-container">
+        <div class="project-card">
+            <img src="img/project-1.png" class="project-img" alt="">
+            <div class="project-content">
+                <h1 class="project-title">project 01</h1>
+                <p class="project-info">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit vitae delectus cumque repudiandae aliquam optio accusamus natus nobis! Nam, sunt?
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn github">github repo</button>
+                    <button class="project-btn live">see live</button>
+                </div>
+            </div>
+        </div>
+        // +3 more cards
+    </div>
+</section>
+Also style it.
+/* project-section */
+
+.project-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 100px;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    opacity: 0;
+}
+
+.project-heading{
+    font-size: 100px;
+    background: #252525;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+
+.project-card{
+    height: 400px;
+    position: relative;
+}
+
+.project-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.project-content{
+    position: relative;
+    padding: 40px;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+}
+
+.project-title{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+}
+
+.project-info{
+    margin: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.project-btn-grp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.project-btn{
+    height: 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.project-btn.live{
+    background: none;
+    border: 2px solid #fff;
+}
+
+.project-card:hover .project-img{
+    filter: blur(20px);
+}
+
+.project-card:hover .project-content{
+    opacity: 1;
+}
+In the above code, I have already added fixed position to project-section and defined its opacity to 0. But for you in order to see the output. make sure you add active class in project-section like this.
+<section class="project-section active">
+Output [ With hover effect ]
+Project section
+
+Navigation
+Before going forward, let's make the navigation system first. For that code this inside app.js file.
+const links = document.querySelectorAll('.link');
+const sections = document.querySelectorAll('section');
+
+let activeLink = 0;
+
+links.forEach((link, i) => {
+    link.addEventListener('click', () => {
+        if(activeLink != i){
+            links[activeLink].classList.remove('active');
+            link.classList.add('active');
+            sections[activeLink].classList.remove('active');
+
+            setTimeout(() => {
+                activeLink = i;
+                sections[i].classList.add('active');
+            }, 1000);
+        }
+    })
+})
+In the above code, first I am selecting all the links and sections. After that, I defined activeLink this variable will track the current active section or link. After that, I used forEach method to loop through all the links. Inside that I am access individual link and its index.
+
+Inside it first, I am adding click event to link using addEventListener. Then I used a simple condition to make sure user is not clicking on the active link. After that, I am removing the active class from the current active link using classList.remove and adding active class to the clicked link using classList.add. I am doing the same to remove the active class from the active section.
+
+Once done with that, I am using setTimeout to add a 1s delay in executing the below codes. Inside the timeout, it is just simply adding the active class again.
+
+You might see the navigation as a very easy one, but it was the second hardest thing to make in this project😅
+
+About section.
+Now, let's create the about section. Honestly, my favourite section in this entire website is this about section. Our about section has everything, it has skills section, and also a education timeline.
+
+To create about section, code this after project section.
+<!-- about section -->
+<section class="about-section">
+    <div class="about">
+        <div class="about-img-container">
+            <img src="img/home.png" class="about-img" alt="">
+            <button class="download-cv-btn">downlaod cv</button>
+        </div>
+        <p class="about-info">Lorem ipsum.....</p>
+    </div>
+</section>
+And style it.
+/* about-section */
+
+.about-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 0;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.about{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 65%;
+    grid-gap: 40px;
+}
+
+.about-img-container{
+    position: relative;
+}
+
+.about-info{
+    color: #fff;
+    opacity: 0.6;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.about-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.download-cv-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.download-cv-btn:hover{
+    background: #000;
+}
+Again you might not see anything, make sure to add active class to about-section and remove it from all other sections.
+
+Output
+about section
+
+So, now shall we create the skills section ? Well in our skills section I do not have any skill progress bar which is I think is most used thing in the portfolio. But I think its the worst thing to have. I somewhere read on internet that the progress bar might look awesome to you, but let say it know python 90% and you add it to your website saying, you know 90% of python. There is a change that your client think you know 90% python so maybe you don't know the advance topic although you know the advance topics too. So its create a confusion. Well its just a preference. Anyway, let's make the skills section.
+<!-- skills -->
+<div class="skill-section">
+    <h1 class="heading">skills</h1>
+    <div class="skills-container">
+        <div class="skill-card">
+            <img src="img/html.png" class="skill-img" alt="">
+            <div class="skill-level">98%</div>
+            <h1 class="skill-name">HTML</h1>
+            <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!</p>
+        </div>
+        // +4 more cards
+    </div>
+</div>
+Code the above code under about-section element and style them.
+/* skills */
+
+.skill-section{
+    position: relative;
+    margin: 100px 0;
+}
+
+.heading{
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+.skills-container{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    color: #fff;
+}
+
+.skill-card{
+    position: relative;
+}
+
+.skill-img{
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+
+.skill-name{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 30px 0 20px;
+}
+
+.skill-info{
+    text-align: center;
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.skill-level{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 50%;
+    border: 10px solid;
+}
+
+.skill-card:nth-child(1) .skill-level{
+    background: #ff4f4f28;
+    border-color: #ff4f4f;
+    color: #ff4f4f;
+}
+
+.skill-card:nth-child(2) .skill-level{
+    background: #4fa0ff28;
+    border-color: #4fa0ff;
+    color: #4fa0ff;
+}
+
+.skill-card:nth-child(3) .skill-level{
+    background: #ffed4f28;
+    border-color: #ffed4f;
+    color: #ffed4f;
+}
+
+.skill-card:nth-child(4) .skill-level{
+    background: #52ff4f28;
+    border-color: #52ff4f;
+    color: #52ff4f;
+}
+
+.skill-card:nth-child(5) .skill-level{
+    background: #4fdfff28;
+    border-color: #4fdfff;
+    color: #4fdfff;
+}
+Output
+Skill section
+
+And now the hardest thing, CSS timeline. It was little hard for me to make at first, but I tried my best not to use lot of code to achieve the goal.
+<!-- timeline -->
+<div class="timeline">
+    <h1 class="heading">education and experience</h1>
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">2000-2002</h1>
+            <p class="card-detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto sequi recusandae laborum ipsam dignissimos nostrum vitae provident officia, consectetur ab accusantium corrupti exercitationem temporibus repellat non magni cupiditate ea reprehenderit.</p>
+        </div>
+    </div>
+    //+4 more cards
+</div>
+Make sure to add these codes inside about-section also.
+/* timeline */
+
+.timeline{
+    display: block;
+    width: 80%;
+    margin: 150px auto;
+}
+
+.timeline .heading{
+    margin-bottom: 150px;
+}
+
+.card{
+    width: 45%;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    margin: -80px 0;
+    position: relative;
+    background: #f00;
+}
+
+.card:nth-child(even){
+    margin-left: auto;
+}
+
+.card:nth-child(even):before{
+    content: '';
+    position: absolute;
+    left: -15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid #191919;
+    border-radius: 50%;
+}
+
+.card:nth-child(even):after{
+    content: '';
+    position: absolute;
+    left: -8.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.card:nth-child(odd):before{
+    content: '';
+    position: absolute;
+    right: -13%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid #191919;
+    border-radius: 50%;
+}
+
+.card:nth-child(odd):after{
+    content: '';
+    position: absolute;
+    right: -8.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.card:nth-child(2), .card:nth-child(2):before{
+    background: #ff4f4f;
+}
+.card:nth-child(3), .card:nth-child(3):before{
+    background: #ffb84f;
+}
+.card:nth-child(4), .card:nth-child(4):before{
+    background: #3dca5c;
+}
+.card:nth-child(5), .card:nth-child(5):before{
+    background: #565252;
+}
+.card:nth-child(6), .card:nth-child(6):before{
+    background: #4fa0ff;
+}
+
+.card:nth-child(even) .card-body:before{
+    content: '';
+    position: absolute;
+    left: -12%;
+    top: 0;
+    width: 0px;
+    height: 100%;
+    border: 1px dashed #fff;
+    z-index: -1;
+}
+
+.card-title{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+Output
+timeline
+
+Contact section
+Anddddddd, the last part contact section. Let's create this also.
+<!-- contact section -->
+<section class="contact-section">
+    <form class="contact-form">
+        <input type="text" name="name" id="name" autocomplete="off" placeholder="name">
+        <input type="text" name="email" id="email" autocomplete="off" placeholder="email">
+        <textarea name="msg" id="msg" placeholder="message" autocomplete="off"></textarea>
+        <button type="submit" class="form-submit-btn">contact</button>
+    </form>
+    <!-- map -->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.163742937!2d76.81306771991275!3d28.647279935262464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1639489002410!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+By the way, the above iframe code is the google map embed link. You can get it using google map.
+.contact-section{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+    padding: 100px 150px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+#msg{
+    height: 280px;
+    resize: none;
+    font-family: sans-serif;
+}
+
+.form-submit-btn{
+    background: #ff4f4f;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 40px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.map{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+Output
+Contact section
+
+So, that's it. Great work guys. We are done with the portfolio.
+
+I hope you understood each and everything. If you have doubt or I missed something let me know in the comments.
+
+Articles you may find Useful
+Best CSS Effect
+Infinte CSS loader
+Disney+ Clone
+Youtube API - Youtube Clone
+TMDB - Netflix Clone
+I really appreciate if you can subscribe my youtube channel. I create awesome web contents.
+
+
+
+Source Code
+Thanks for reading
+
+Top comments (37)
+
+Subscribe
+pic
+Add to the discussion
+ 
+ 
+ravavyr profile image
+Ravavyr
+•
+16 Dec 21
+
+As with any tutorial, i feel the focus here is on "pretty" and "components".
+Where is the part about the DOCTYPE? The viewport tag? The Meta tags for SEO?
+What about responsiveness?
+What about accessibility?
+
+I see none of that in the above.
+
+
+30
+ likes
+Like
+Reply
+ 
+ 
+themodernweb profile image
+Modern Web 
+•
+16 Dec 21
+
+Oh! Sry. I'll make sure to add that from onwards. Thanks for suggession.
+
+
+4
+ likes
+Like
+Reply
+ 
+ 
+xr0master profile image
+Sergey Khomushin
+•
+18 Dec 21 • Edited on 18 Dec
+
+I can suggest that you use EmailJS for your contact form, so that your site is not only beautiful but also really works.
+
+
+5
+ likes
+Like
+Reply
+ 
+ 
+trulyprogrammer profile image
+Reeta970
+•
+16 Jan 22
+
+Truly, none of his projects are responsive. They're only good looking and functional.
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+goldfinger profile image
+Caleb
+•
+25 Dec 21
+
+Also, please add, semantic HTML to the list. The tutorial doesn't properly use HTML and heading tags.
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+cmuralisree profile image
+Chittoji Murali Sree Krishna
+•
+17 Dec 21
+
+Can you try showing the live demo using codepen for general html, css, js, and codesandbox for react or angular ...., Because everyone won't have enough time to go through with the videos or with the source code,
+
+And if you have a live demo then it will be easy for others to understand how the page works, and the styling and stuff,
+
+These were up to my perspective, i might be wrong.
+
+
+7
+ likes
+Like
+Reply
+ 
+ 
+organizedfellow profile image
+Jaime Aleman
+•
+20 Dec 21
+
+I think the Author has done "enough" by providing the source code above! You also want them to create a codepen AND codesandbox?
+
+
+4
+ likes
+Like
+Reply
+ 
+ 
+cmuralisree profile image
+Chittoji Murali Sree Krishna
+•
+20 Dec 21
+
+whats wrong in sharing a live demo mr.aleman ?
+Everyone can't understand the functionality or styling of a page by just looking at the source code or photos, until unless they experience it,
+
+And I have already mentioned those were upto my perspective, so i guess we are clear about this.
+
+
+2
+ likes
+Like
+Thread
+ 
+organizedfellow profile image
+Jaime Aleman
+•
+20 Dec 21 • Edited on 20 Dec
+
+All the code is there, so, easily, You can copy & Paste into Codepen - shouldn't be a problem. I already made a Codepen of my own, using the above code. Looks nice.
+
+BTW: does this code made sense to you 😎 👉
+matrixcode
+
+(if the code doesn't make sense to you - perhaps you are in the wrong community)
+
+
+2
+ likes
+Like
+Thread
+ 
+cmuralisree profile image
+Chittoji Murali Sree Krishna
+•
+20 Dec 21
+
+Perhaps, you should learn English first and then you can comment on others, i have already mentioned it twice it's upto my perspective,
+
+Yeah i know this isn't a stack overflow to just keep looking at the code, so stop giving funny comments,
+
+i guess you have enough time to create pens or keep arguing for pointless statements, then congrats,
+
+But i don't have enough time to keep arguing about this, so i will end here, if you want you can prolong
+
+
+2
+ likes
+Like
+Thread
+ 
+organizedfellow profile image
+Jaime Aleman
+•
+20 Dec 21
+
+😉 Okay, Buddy.
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+trulyprogrammer profile image
+Reeta970
+•
+16 Jan 22
+
+It's not enough, the page has to be responsive.
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+vinaymayavanshi13 profile image
+Vinay Mayavanshi
+•
+19 Dec 21 • Edited on 19 Dec
+
+Amazing🔥🔥🔥,but in skill sections remove those percentages😅.Many recruiters have suggested not to put such percentages as how can a candidate knows that he has X% of knowledge with a particular language.Many recruiters gets annoyed by this.
+
+
+5
+ likes
+Like
+Reply
+ 
+ 
+themodernweb profile image
+Modern Web 
+•
+19 Dec 21
+
+Yeah Sure Its a common mistake. I made that in design but also mentioned in my video tutorial that why is this bad idea to put percentage in skill section. Thanks 👍
+
+
+3
+ likes
+Like
+Reply
+ 
+ 
+jerrykay profile image
+Jerry_Kay
+•
+19 Dec 21
+
+You have reason.
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+geekygaurab profile image
+GeekyGaurab
+•
+9 Jan 22
+
+Yup! And because of that, I have replaced the percentage number with a ✔ (to mark checked/completed).
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+ricobrase profile image
+Rico Brase
+•
+10 Jan 22
+
+Well, isn't that some kind of redundant information then?
+
+You (hopefully) wouldn't list skills, you don't have in your CV, would you? Therefore everything you mention should have a checkmark. And if everything has it, it's somewhat redundant. 😄
+
+
+2
+ likes
+Like
+Thread
+ 
+geekygaurab profile image
+GeekyGaurab
+•
+11 Jan 22 • Edited on 11 Jan
+
+Yes, you are right!
+
+That's why, I have just put the logos (coloured ones looked better than black and white ones) in the skills section and removed the percent scores and checks as well.
+
+
+2
+ likes
+Like
+Thread
+ 
+ashleyjsheridan profile image
+Ashley Sheridan
+•
+12 Jan 22
+
+One thing I do on mine is to list my skill level in a thing as either Great, Good, Fair, or Basic. That way, it gives across what I want to convey, but is less rigid than something like a percent score in a skill.
+
+A score of 100% in a skill is effectively impossible, and if 100% is impossible to achive, it means that the other values have no meaning, because they can never be accurate.
+
+
+3
+ likes
+Like
+Reply
+ 
+ 
+averysinar profile image
+Avery-Sinar
+•
+8 Mar
+
+I made an account here just to be able to say how much of a lifesaver this guide is. Can't manage to get the links to work but that's fine by me, this gave me an incredibly professional looking template that I could adapt to my own portfolio. Thank you so much, and keep up the great work.
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+abdullmng profile image
+abdullmng
+•
+17 Dec 21
+
+Great one, please create another tutorial to add responsiveness. Looking forward to it
+
+
+5
+ likes
+Like
+Reply
+ 
+ 
+michaelrodr profile image
+MichaelRodr
+•
+20 Dec 21
+
+Hello, thanks for sharing, I see the design theme very well focused, it is true that for those who are starting it is a good base, the adaptability to different devices (responsive design) must also be taken into account.
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+sofiirodriguezc profile image
+SofiiRC
+•
+5 Jan 22
+
+Excelent! Thank you for this tutorial, it helped me to understand better HTML, css and js
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+themodernweb profile image
+Modern Web 
+•
+5 Jan 22
+
+I am glad you liked it ❤️
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+robsonmuniz16 profile image
+Robson Muniz
+•
+21 Dec 21
+
+Great Article, thanks for sharing it!
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+leeuw profile image
+leeuw
+•
+20 Dec 21
+
+cool
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+ten_code_10 profile image
+Ténénan
+•
+19 Dec 21
+
+I recently made a basic portfolio, it is clear that it has nothing to do with yours in terms of design. But you help me to improve it. Thanks!
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+themodernweb profile image
+Modern Web 
+•
+19 Dec 21
+
+Great! I hope you make it more amazing than mine. 👍
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+felix715 profile image
+felix715
+•
+19 Dec 21
+
+Pretty job ...but try to ensure the site is functional
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+themodernweb profile image
+Modern Web 
+•
+19 Dec 21
+
+I'll make sure of that. Thanks
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+joset98 profile image
+joset98
+•
+19 Dec 21
+
+hey dude thanks, you're crack
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+geekygaurab profile image
+GeekyGaurab
+•
+10 Jan 22
+
+I know the images can be fetched from the google drive link. But say I want a C language logo in the same format to be used in the website, where and how can I get that?
+
+Thanks!
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+themodernweb profile image
+Modern Web 
+•
+10 Jan 22
+
+you can download the C logo from google and then turn it into black and white with any photo editor
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+cosminp9 profile image
+Cosmin Popescu
+•
+19 Dec 21
+
+Navigation system for navbar? Really? Stop!
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+themodernweb profile image
+Modern Web 
+•
+19 Dec 21
+
+Hmm! Its just made for fun and UX practice
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+trulyprogrammer profile image
+Reeta970
+•
+16 Jan 22
+
+The projects section and about section is visible only when I make a change in the code and fades away after a second.
+Please 🙏🏻 help.
+
+
+1
+ like
+Like
+Reply
+View full discussion (37 comments)
+Code of Conduct • Report abuse
+DEV Community
+
+DEV Author Spotlight
+miracool image 
+Makanju Emmanuel
+Follow
+I’m an enthusiastic software developer and a technical writer, with a keen focus on making the web a better environment. I love to motivate myself to be consistent with learning and working smart.
+Meet Makanju Emmanuel, an enthusiastic software developer and technical writer with a passion for making the web a better environment. They have recently been focusing on Vue.js, a popular JavaScript framework for building user interfaces. Makanju has written a series of articles called "Vue Made Easy," aimed at helping beginners understand the fundamentals and best practices of Vue.js.
+
+In their articles, Makanju covers topics like Vuex, a state management library for Vue.js, and self-contained components for frontend applications. They also discuss the differences between React and Vue, as well as troubleshooting CORS preflight errors in Vue applications. If you're interested in learning more about Vue.js or web development in general, be sure to follow Makanju Emmanuel for insightful and informative content!
+
+miracool 
+Part 3(a): How to Build a Self-Contained Component
+Makanju Emmanuel ・ Jun 2 ・ 4 min read
+#programming #vue #frontend #webdev
+miracool 
+Part 2: Understanding Vuex: A State Management Library.
+Makanju Emmanuel ・ May 30 ・ 5 min read
+#webdev #javascript #programming #vue
+miracool 
+Part 1: Getting Started with Vue
+Makanju Emmanuel ・ May 28 ・ 6 min read
+#webdev #javascript #programming #vue
+miracool 
+Vue Made Easy: Introduction.
+Makanju Emmanuel ・ May 28 ・ 3 min read
+#webdev #frontend #vue #javascript
+miracool 
+React Vs Vue
+Makanju Emmanuel ・ May 19 ・ 1 min read
+#webdev #react #vue #frontend
+miracool 
+When or how do you know which to choose between CSR and SSR ?
+Makanju Emmanuel ・ May 16 ・ 1 min read
+#discuss #webdev #programming #frontend
+miracool 
+A guide to Vue Lifecycle hooks.
+Makanju Emmanuel ・ May 16 ・ 3 min read
+miracool 
+Troubleshooting CORS preflight error in vue applications.
+Makanju Emmanuel ・ May 13 ・ 3 min read
+#vue #webdev
+Read next
+mohammadfaisal profile image
+Download HTML as a PDF in React
+Mohammad Faisal - Jun 11
+
+jason89521 profile image
+Introducing React Server Model (RSM) - The Design Philosophy
+Xuan - Jun 11
+
+jumzeey profile image
+5 Real life use cases of VueJs Computed properties, with code examples.
+Jumzeey - May 31
+
+shreyanshsheth profile image
+System Design: Google Drive That Scales To The Moon
+Shreyansh sheth - May 8
+
+
+Modern Web
+Follow
+Hello, I am kunaal a fullstack developer.I have a youtube channel "Modern Web" where I teach to make awesome web UI/ UX. Don't forget to checkout my youtube channel
+LOCATION
+Delhi, India
+JOINED
+2 May 2021
+More from Modern Web
+Here is how I made a strong password checker using Javascript.
+#webdev #javascript #css #beginners
+Responsive Travel website using HTML, CSS and Javascript
+#beginners #webdev #css #javascript
+HTML 101: Adding Images and Videos to Your Webpages
+#html #css #beginners #webdev
+DEV Community
+
+Build a reactive split-flap display with Angular cover image
+
+Build a reactive split-flap display with Angular
+Let's explore the UI possibilities with Angular!
+
+Read full post
+
+.contact-section{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+    padding: 100px 150px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+#msg{
+    height: 280px;
+    resize: none;
+    font-family: sans-serif;
+}
+
+.form-submit-btn{
+    background: #ff4f4f;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 40px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.map{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
